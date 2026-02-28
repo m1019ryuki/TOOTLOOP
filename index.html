@@ -40,16 +40,18 @@
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-      <div class="flex items-center gap-2 sm:gap-3 cursor-pointer" onclick="switchTab('about')">
-        <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
-        <span class="text-lg sm:text-xl font-bold text-blue-800 tracking-tight">TUTOLOOP</span>
-        <span class="text-xs sm:text-sm text-gray-900 ml-1">阪大生による学習塾</span>
+      <div class="flex items-center gap-1.5 sm:gap-3 cursor-pointer" onclick="switchTab('about')">
+        <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-7 h-7 sm:w-10 sm:h-10 object-contain" />
+        <div class="flex items-baseline gap-1 sm:gap-1.5">
+          <span class="text-base sm:text-xl font-bold text-blue-800 tracking-tight whitespace-nowrap">TUTOLOOP</span>
+          <span class="text-[10px] sm:text-sm text-gray-900 whitespace-nowrap">阪大生による学習塾</span>
+        </div>
       </div>
       <div class="flex items-center gap-1 sm:gap-2">
-        <button id="tab-about" onclick="switchTab('about')" class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm bg-blue-500 text-white shadow-md shadow-blue-200">
+        <button id="tab-about" onclick="switchTab('about')" class="px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-[11px] sm:text-sm whitespace-nowrap bg-blue-500 text-white shadow-md shadow-blue-200">
           当塾について
         </button>
-        <button id="tab-consultation" onclick="switchTab('consultation')" class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm text-gray-500 hover:text-blue-600 hover:bg-blue-50">
+        <button id="tab-consultation" onclick="switchTab('consultation')" class="px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-[11px] sm:text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 hover:bg-blue-50">
           無料相談
         </button>
       </div>
@@ -74,18 +76,18 @@
             <i data-lucide="map-pin" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
             豊中市・箕面市・吹田市
           </div>
-          <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight drop-shadow-md">
+          <h1 class="text-2xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight drop-shadow-md">
             「解き方」より、<br />考え方を。
           </h1>
-          <p class="text-lg sm:text-xl md:text-2xl text-blue-50 mb-4 sm:mb-6 font-medium">
+          <p class="text-base sm:text-xl md:text-2xl text-blue-50 mb-4 sm:mb-6 font-medium">
             阪大生の思考回路を、<br class="sm:hidden" />その身に刻む。
           </p>
           <p class="text-sm sm:text-base text-blue-100 mb-8 sm:mb-10 max-w-xl mx-auto leading-relaxed px-2">
             小学生・中学生を対象に、<br class="sm:hidden" />解法の暗記ではなく、<br class="sm:hidden" />考え抜く力を育てる、<br class="sm:hidden" />新しい学習塾です。
           </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-blue-50 transition-all duration-300 shadow-lg text-base sm:text-lg font-bold">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-white text-blue-600 px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-blue-50 transition-all duration-300 shadow-lg text-sm sm:text-lg font-bold whitespace-nowrap">
             無料相談に申し込む
-            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"></i>
           </a>
         </div>
       </div>
@@ -100,7 +102,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10 sm:mb-14">
           <p class="text-blue-500 font-semibold text-xs sm:text-sm mb-2">Our Philosophy</p>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">私たちの指導方針</h2>
+          <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900">私たちの指導方針</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
@@ -160,7 +162,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10 sm:mb-14">
           <p class="text-blue-500 font-semibold text-xs sm:text-sm mb-2">Who It's For</p>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">このような方におすすめです</h2>
+          <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900">このような方におすすめです</h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -242,7 +244,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div class="max-w-3xl mx-auto text-center text-white">
           <p class="text-blue-100 font-semibold text-xs sm:text-sm mb-2">Contact Us</p>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">まずは無料相談から</h2>
+          <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">まずは無料相談から</h2>
           <p class="text-sm sm:text-lg text-blue-50 mb-8 sm:mb-12 leading-relaxed px-2">
             阪大生の思考プロセスを体感してください。<br class="hidden sm:inline" />
             お子様の学習に対する姿勢が変わります。
@@ -265,7 +267,7 @@
                 </div>
                 <div>
                   <p class="text-xs text-gray-500 mb-0.5">メールでのお問い合わせ</p>
-                  <p class="text-base sm:text-lg font-bold text-gray-900">tootloop@gmail.com</p>
+                  <p class="text-sm sm:text-lg font-bold text-gray-900 break-all sm:break-normal">tootloop@gmail.com</p>
                 </div>
               </a>
             </div>
@@ -295,7 +297,7 @@
               <i data-lucide="heart-handshake" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
               無料 ・ 対面 or オンライン
             </div>
-            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-5 sm:mb-7 leading-tight drop-shadow-md">
+            <h1 class="text-xl sm:text-3xl md:text-5xl font-extrabold mb-5 sm:mb-7 leading-tight drop-shadow-md">
               そのお悩み、<br />現役阪大生に<br class="sm:hidden" />力にならせてください。
             </h1>
             <p class="text-sm sm:text-base md:text-lg text-white/90 mb-8 sm:mb-10 max-w-xl mx-auto leading-loose px-2">
@@ -304,9 +306,9 @@
               直近の受験を乗り越えてきた<br class="sm:hidden" />私たち大学生だからこそ、<br />
               その「生きた経験」を活かして<br class="sm:hidden" />お力になれることがあります。
             </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-white text-emerald-600 px-6 py-3 sm:px-10 sm:py-4 rounded-full hover:bg-emerald-50 transition-all duration-300 shadow-xl shadow-black/10 text-base sm:text-lg font-bold">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-white text-emerald-600 px-5 py-3 sm:px-10 sm:py-4 rounded-full hover:bg-emerald-50 transition-all duration-300 shadow-xl shadow-black/10 text-sm sm:text-lg font-bold whitespace-nowrap">
               阪大生の無料相談に申し込む
-              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+              <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"></i>
             </a>
           </div>
         </div>
@@ -320,7 +322,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="text-center mb-10 sm:mb-14">
             <p class="text-emerald-500 font-semibold text-xs sm:text-sm mb-2 tracking-widest">What We Can Help</p>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">無料相談でできること</h2>
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900">無料相談でできること</h2>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
@@ -440,9 +442,9 @@
 
           <!-- セクション内CTA -->
           <div class="text-center mt-10 sm:mt-14">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 text-base sm:text-lg font-bold">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-full transition-all duration-300 shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 text-sm sm:text-lg font-bold whitespace-nowrap">
               阪大生の無料相談に申し込む
-              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+              <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"></i>
             </a>
           </div>
         </div>
@@ -475,14 +477,14 @@
                   </div>
                   <div>
                     <p class="text-xs text-gray-500 mb-0.5">メールでのお問い合わせ</p>
-                    <p class="text-base sm:text-lg font-bold text-gray-900">tootloop@gmail.com</p>
+                    <p class="text-sm sm:text-lg font-bold text-gray-900 break-all sm:break-normal">tootloop@gmail.com</p>
                   </div>
                 </a>
               </div>
               <div class="mt-6 pt-6 border-t border-gray-100">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white py-4 rounded-xl transition-all duration-300 font-bold text-sm sm:text-base shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white py-3.5 sm:py-4 rounded-xl transition-all duration-300 font-bold text-xs sm:text-base shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 whitespace-nowrap">
                   阪大生の無料相談に申し込む
-                  <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+                  <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"></i>
                 </a>
               </div>
             </div>
@@ -512,8 +514,8 @@
 
   <!-- スマホ用固定CTAバー -->
   <div class="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-3.5 rounded-xl transition-all duration-300 font-bold text-sm shadow-lg shadow-blue-200">
-      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-3 rounded-xl transition-all duration-300 font-bold text-xs shadow-lg shadow-blue-200 whitespace-nowrap">
+      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
       阪大生の無料相談に申し込む
     </a>
   </div>
@@ -526,7 +528,7 @@
       var consultationContent = document.getElementById('content-consultation');
       var tabAbout = document.getElementById('tab-about');
       var tabConsultation = document.getElementById('tab-consultation');
-      var base = 'px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm ';
+      var base = 'px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-[11px] sm:text-sm whitespace-nowrap ';
       var inactiveClass = 'text-gray-500 hover:text-blue-600 hover:bg-blue-50';
 
       if (tab === 'about') {
