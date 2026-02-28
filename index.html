@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUTOLOOP | 豊中市・箕面市・吹田市 - 思考力を育てる学習塾</title>
+  <meta name="description" content="解き方ではなく、考え方を。大阪大学生が運営する、思考力を育てる学習塾。豊中市・箕面市・吹田市で小学生・中学生を対象に指導しています。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Noto Sans JP', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .icon-box { display: inline-flex; align-items: center; justify-content: center; }
+    .card-lift { transition: transform 0.3s, box-shadow 0.3s; }
+    .card-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(59,130,246,0.15); }
+    .float-animation { animation: float 5s ease-in-out infinite; }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .hero-wave {
+      position: absolute; bottom: -2px; left: 0; width: 100%;
+    }
+    /* スマホ用：brタグをレスポンシブに */
+    .br-mobile { display: none; }
+    .br-desktop { display: inline; }
+    @media (max-width: 767px) {
+      .br-mobile { display: inline; }
+      .br-desktop { display: none; }
+      /* スマホ時：固定CTAバーの分だけ下にパディング */
+      body { padding-bottom: 72px; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2 sm:gap-3 cursor-pointer" onclick="switchTab('about')">
+        <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
+        <span class="text-lg sm:text-xl font-bold text-blue-800 tracking-tight">TUTOLOOP</span>
+      </div>
+      <div class="flex items-center gap-1 sm:gap-2">
+        <button id="tab-about" onclick="switchTab('about')" class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm bg-blue-500 text-white shadow-md shadow-blue-200">
+          当塾について
+        </button>
+        <button id="tab-consultation" onclick="switchTab('consultation')" class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm text-gray-500 hover:text-blue-600 hover:bg-blue-50">
+          無料相談
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-14 sm:pt-16">
+
+    <!-- ========== 当塾について タブ ========== -->
+    <div id="content-about">
+
+    <!-- Hero -->
+    <section class="relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 pt-16 pb-28 sm:pt-24 sm:pb-36 md:pt-32 md:pb-44 overflow-hidden">
+      <div class="absolute top-10 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-52 sm:w-80 h-52 sm:h-80 bg-blue-300/20 rounded-full blur-3xl"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+        <div class="max-w-3xl mx-auto text-center text-white">
+          <div class="flex justify-center mb-6 sm:mb-8">
+            <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-16 h-16 sm:w-24 sm:h-24 object-contain float-animation drop-shadow-lg" />
+          </div>
+          <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            豊中市・箕面市・吹田市
+          </div>
+          <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight drop-shadow-md">
+            「解き方」より、<br />考え方を。
+          </h1>
+          <p class="text-lg sm:text-xl md:text-2xl text-blue-50 mb-4 sm:mb-6 font-medium">
+            阪大生の思考回路を、<br class="sm:hidden" />その身に刻む。
+          </p>
+          <p class="text-sm sm:text-base text-blue-100 mb-8 sm:mb-10 max-w-xl mx-auto leading-relaxed px-2">
+            小学生・中学生を対象に、<br class="sm:hidden" />解法の暗記ではなく、<br class="sm:hidden" />考え抜く力を育てる、<br class="sm:hidden" />新しい学習塾です。
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-blue-50 transition-all duration-300 shadow-lg text-base sm:text-lg font-bold">
+            無料相談に申し込む
+            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Wave divider -->
+      <svg class="hero-wave" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 1080,0 1440,60 L1440,100 L0,100 Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- 指導方針 -->
+    <section class="py-12 sm:py-16 md:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 sm:mb-14">
+          <p class="text-blue-500 font-semibold text-xs sm:text-sm mb-2">Our Philosophy</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">私たちの指導方針</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <!-- 従来の塾 -->
+          <div class="bg-gray-50 p-5 sm:p-7 rounded-2xl border border-gray-200 card-lift">
+            <div class="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-xl icon-box flex-shrink-0">
+                <i data-lucide="book-open" class="w-5 h-5 sm:w-6 sm:h-6 text-gray-500"></i>
+              </div>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-gray-700 mb-1">従来の塾</h3>
+                <p class="text-gray-500 text-sm sm:text-base">解法を詳しく解説</p>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed text-xs sm:text-sm">教材の模範解答を詳しく解説し、暗記させることで、テストの点数向上をめざす</p>
+          </div>
+
+          <!-- 当塾 -->
+          <div class="bg-blue-50 p-5 sm:p-7 rounded-2xl border-2 border-blue-200 card-lift relative">
+            <div class="absolute top-3 right-3">
+              <i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>
+            </div>
+            <div class="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-xl icon-box flex-shrink-0">
+                <i data-lucide="lightbulb" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-blue-800 mb-1">当塾</h3>
+                <p class="text-blue-700 font-medium text-sm sm:text-base">阪大生の「思考の癖・プロセス」を体感させる。</p>
+              </div>
+            </div>
+            <p class="text-blue-700/80 leading-relaxed text-xs sm:text-sm">答えにたどり着くまでの「頭の使い方」を身体に覚え込ませることで、一生モノの基礎的思考力を養います。</p>
+          </div>
+        </div>
+
+        <!-- バナー -->
+        <div class="relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-600 p-6 sm:p-8 md:p-14 rounded-2xl sm:rounded-3xl text-white text-center shadow-xl shadow-blue-200">
+          <div class="absolute top-0 right-0 w-36 sm:w-52 h-36 sm:h-52 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+          <div class="absolute bottom-0 left-0 w-28 sm:w-40 h-28 sm:h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/3"></div>
+          <div class="relative">
+            <div class="flex justify-center mb-4 sm:mb-6">
+              <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90" />
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-snug">
+              多くの塾は「解説」をしますが、<br class="hidden sm:inline" />私たちは「思考」を共有します。
+            </h3>
+            <p class="text-sm sm:text-base md:text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
+              阪大生がどのように問題に向き合い、どう考え、どう答えを導くのか。その全プロセスを隣で体験することで、思考力そのものを鍛えます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- おすすめ対象 -->
+    <section class="py-12 sm:py-16 md:py-20 bg-blue-50/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 sm:mb-14">
+          <p class="text-blue-500 font-semibold text-xs sm:text-sm mb-2">Who It's For</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">このような方におすすめです</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          <div class="bg-white p-5 sm:p-7 rounded-2xl shadow-sm border border-blue-100 card-lift group">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-2xl icon-box mb-4 sm:mb-6 group-hover:bg-blue-200 transition-colors">
+              <i data-lucide="target" class="w-6 h-6 sm:w-7 sm:h-7 text-blue-500"></i>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 leading-snug">本質的な学力をつけたい</h3>
+            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">テクニックではなく、根本的な考える力を身につけさせたい保護者の方</p>
+          </div>
+          <div class="bg-white p-5 sm:p-7 rounded-2xl shadow-sm border border-blue-100 card-lift group">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-2xl icon-box mb-4 sm:mb-6 group-hover:bg-blue-200 transition-colors">
+              <i data-lucide="users" class="w-6 h-6 sm:w-7 sm:h-7 text-blue-500"></i>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 leading-snug">少人数で丁寧に教わりたい</h3>
+            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">大人数の授業ではなく、一人ひとりに寄り添った指導を求める方</p>
+          </div>
+          <div class="bg-white p-5 sm:p-7 rounded-2xl shadow-sm border border-blue-100 card-lift group sm:col-span-2 md:col-span-1">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-2xl icon-box mb-4 sm:mb-6 group-hover:bg-blue-200 transition-colors">
+              <i data-lucide="book-open" class="w-6 h-6 sm:w-7 sm:h-7 text-blue-500"></i>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 leading-snug">思考力を鍛えたい</h3>
+            <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">暗記に頼らず、自分の頭で考え抜く習慣を身につけたい生徒</p>
+          </div>
+        </div>
+
+        <div class="mt-6 sm:mt-8 bg-white p-4 sm:p-6 rounded-2xl border border-blue-200 shadow-sm">
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="w-10 h-10 sm:w-11 sm:h-11 bg-blue-100 rounded-xl icon-box flex-shrink-0">
+              <i data-lucide="map-pin" class="w-4 h-4 sm:w-5 sm:h-5 text-blue-500"></i>
+            </div>
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">対象地域・学年</h3>
+              <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <span class="text-blue-600 font-medium">地域：</span>豊中市・箕面市・吹田市にお住まいの方<br />
+                <span class="text-blue-600 font-medium">対象：</span>小学生・中学生
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3教科特化 -->
+    <section class="py-12 sm:py-16 md:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 sm:mb-14">
+          <p class="text-blue-500 font-semibold text-xs sm:text-sm mb-2">Subjects</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">思考力を必要とする<br class="sm:hidden" />3教科特化型</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          <div class="text-center card-lift bg-gradient-to-b from-blue-50 to-white p-6 sm:p-8 rounded-2xl border border-blue-100 group flex sm:block items-center gap-4 sm:gap-0">
+            <div class="w-14 h-14 sm:w-20 sm:h-20 sm:mx-auto sm:mb-6 bg-blue-500 rounded-2xl icon-box shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+              <i data-lucide="book-open" class="w-7 h-7 sm:w-9 sm:h-9 text-white"></i>
+            </div>
+            <div class="text-left sm:text-center">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-3">国語</h3>
+              <p class="text-gray-500 leading-relaxed text-xs sm:text-sm">感覚に頼らない「正しい文章の読み方」を伝授します</p>
+            </div>
+          </div>
+          <div class="text-center card-lift bg-gradient-to-b from-blue-50 to-white p-6 sm:p-8 rounded-2xl border border-blue-100 group flex sm:block items-center gap-4 sm:gap-0">
+            <div class="w-14 h-14 sm:w-20 sm:h-20 sm:mx-auto sm:mb-6 bg-blue-600 rounded-2xl icon-box shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+              <i data-lucide="languages" class="w-7 h-7 sm:w-9 sm:h-9 text-white"></i>
+            </div>
+            <div class="text-left sm:text-center">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-3">英語</h3>
+              <p class="text-gray-500 leading-relaxed text-xs sm:text-sm">文脈から真意を汲み取り、未知の単語さえも推測する読解力を養います</p>
+            </div>
+          </div>
+          <div class="text-center card-lift bg-gradient-to-b from-blue-50 to-white p-6 sm:p-8 rounded-2xl border border-blue-100 group flex sm:block items-center gap-4 sm:gap-0">
+            <div class="w-14 h-14 sm:w-20 sm:h-20 sm:mx-auto sm:mb-6 bg-blue-700 rounded-2xl icon-box shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+              <i data-lucide="calculator" class="w-7 h-7 sm:w-9 sm:h-9 text-white"></i>
+            </div>
+            <div class="text-left sm:text-center">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-3">数学</h3>
+              <p class="text-gray-500 leading-relaxed text-xs sm:text-sm">公式の暗記ではなく、正解へ至る「論理的な思考プロセス」を身につけます</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (当塾について内) -->
+    <section id="contact" class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-blue-400/20 rounded-full translate-x-1/3 translate-y-1/3"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+        <div class="max-w-3xl mx-auto text-center text-white">
+          <p class="text-blue-100 font-semibold text-xs sm:text-sm mb-2">Contact Us</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">まずは無料相談から</h2>
+          <p class="text-sm sm:text-lg text-blue-50 mb-8 sm:mb-12 leading-relaxed px-2">
+            阪大生の思考プロセスを体感してください。<br class="hidden sm:inline" />
+            お子様の学習に対する姿勢が変わります。
+          </p>
+          <div class="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 max-w-md mx-auto text-gray-800 shadow-2xl">
+            <h3 class="text-lg sm:text-xl font-bold mb-6 sm:mb-8 text-gray-900">お問い合わせ</h3>
+            <div class="space-y-3 sm:space-y-4 text-left">
+              <a href="tel:080-2484-1883" class="flex items-center gap-3 sm:gap-4 bg-blue-50 hover:bg-blue-100 active:bg-blue-200 p-3.5 sm:p-4 rounded-xl transition-colors">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 bg-blue-500 rounded-xl icon-box flex-shrink-0">
+                  <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 mb-0.5">お電話でのお問い合わせ</p>
+                  <p class="text-base sm:text-lg font-bold text-gray-900">080-2484-1883</p>
+                </div>
+              </a>
+              <a href="mailto:info@handai-juku.jp" class="flex items-center gap-3 sm:gap-4 bg-blue-50 hover:bg-blue-100 active:bg-blue-200 p-3.5 sm:p-4 rounded-xl transition-colors">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 bg-blue-500 rounded-xl icon-box flex-shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 mb-0.5">メールでのお問い合わせ</p>
+                  <p class="text-sm sm:text-base font-semibold text-gray-900">info@handai-juku.jp</p>
+                </div>
+              </a>
+            </div>
+            <p class="text-gray-400 mt-5 sm:mt-6 text-xs text-center">受付時間：平日 14:00〜21:00 / 土曜 10:00〜18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div><!-- /content-about -->
+
+    <!-- ========== 無料相談 タブ ========== -->
+    <div id="content-consultation" style="display: none;">
+
+      <!-- 無料相談 Hero（緑×青グラデーション） -->
+      <section class="relative bg-gradient-to-br from-emerald-400 via-teal-500 to-blue-500 pt-16 pb-28 sm:pt-24 sm:pb-36 md:pt-32 md:pb-44 overflow-hidden">
+        <div class="absolute top-10 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-white/15 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-52 sm:w-80 h-52 sm:h-80 bg-emerald-200/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-300/10 rounded-full blur-3xl"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+          <div class="max-w-3xl mx-auto text-center text-white">
+            <div class="flex justify-center mb-6 sm:mb-8">
+              <div class="bg-white/20 backdrop-blur-sm p-3 sm:p-4 rounded-2xl">
+                <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-14 h-14 sm:w-20 sm:h-20 object-contain float-animation" />
+              </div>
+            </div>
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-5 sm:mb-6">
+              <i data-lucide="heart-handshake" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              無料 ・ 対面 or オンライン
+            </div>
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-5 sm:mb-7 leading-tight drop-shadow-md">
+              そのお悩み、<br />現役阪大生に<br class="sm:hidden" />力にならせてください。
+            </h1>
+            <p class="text-sm sm:text-base md:text-lg text-white/90 mb-8 sm:mb-10 max-w-xl mx-auto leading-loose px-2">
+              「成績が伸びない」「家で勉強しない」<br class="sm:hidden" />「今の塾でいいのか不安」……。<br />
+              お子様の学習の悩みは、<br class="sm:hidden" />ご家族だけで抱え込んでも解決しません。<br />
+              直近の受験を乗り越えてきた<br class="sm:hidden" />私たち大学生だからこそ、<br />
+              その「生きた経験」を活かして<br class="sm:hidden" />お力になれることがあります。
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-white text-emerald-600 px-6 py-3 sm:px-10 sm:py-4 rounded-full hover:bg-emerald-50 transition-all duration-300 shadow-xl shadow-black/10 text-base sm:text-lg font-bold">
+              阪大生の無料相談に申し込む
+              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+        <svg class="hero-wave" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,60 C360,120 1080,0 1440,60 L1440,100 L0,100 Z" fill="#f0fdf4"/>
+        </svg>
+      </section>
+
+      <!-- 相談できること -->
+      <section class="py-12 sm:py-16 md:py-20 bg-green-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10 sm:mb-14">
+            <p class="text-emerald-500 font-semibold text-xs sm:text-sm mb-2 tracking-widest">What We Can Help</p>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">無料相談でできること</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 shadow-sm card-lift group">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div class="w-11 h-11 sm:w-13 sm:h-13 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl icon-box flex-shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-emerald-200">
+                  <i data-lucide="search" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">成績不振の分析</h3>
+                  <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">なぜ伸びないのか、原因を共に探ります。</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 shadow-sm card-lift group">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div class="w-11 h-11 sm:w-13 sm:h-13 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl icon-box flex-shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-teal-200">
+                  <i data-lucide="home" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">家庭学習のコツ</h3>
+                  <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">子供が自走する接し方をアドバイスします。</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 shadow-sm card-lift group">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div class="w-11 h-11 sm:w-13 sm:h-13 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl icon-box flex-shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-blue-200">
+                  <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">塾選びのセカンドオピニオン</h3>
+                  <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">今の環境がお子さんの性格に合っているか、客観的に判断します。</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 shadow-sm card-lift group">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div class="w-11 h-11 sm:w-13 sm:h-13 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl icon-box flex-shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-emerald-200">
+                  <i data-lucide="pencil" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">体験授業としての活用</h3>
+                  <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">実際にお子さんへ指導を行い、私たちの「思考プロセスを伝える授業」を体感いただけます。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1時間の使い方 -->
+      <section class="py-12 sm:py-16 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10 sm:mb-14">
+            <p class="text-teal-500 font-semibold text-xs sm:text-sm mb-2 tracking-widest">Time Schedule</p>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">1時間の使い方</h2>
+            <p class="text-gray-500 text-sm sm:text-base mt-3 sm:mt-4 max-w-lg mx-auto leading-relaxed">ご要望があれば合わせますが、以下のような流れをおすすめしております。</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-5 sm:p-7 rounded-2xl border border-emerald-200 card-lift">
+              <div class="flex items-center gap-2 mb-3 sm:mb-4">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl icon-box flex-shrink-0 shadow-md shadow-emerald-200">
+                  <i data-lucide="message-circle" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-sm sm:text-base font-bold text-emerald-600">前半 30分</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2">お悩みヒアリング</h3>
+              <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">親子3人で勉強に関するお悩みや不安をざっくばらんにお話し。</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-50 to-teal-50 p-5 sm:p-7 rounded-2xl border border-blue-200 card-lift">
+              <div class="flex items-center gap-2 mb-3 sm:mb-4">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl icon-box flex-shrink-0 shadow-md shadow-blue-200">
+                  <i data-lucide="pencil" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-sm sm:text-base font-bold text-blue-600">後半 30分</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2">体験授業</h3>
+              <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">実際に私たちが簡易的な体験授業を行います。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 実施方法 -->
+      <section class="py-12 sm:py-16 md:py-20 bg-green-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10 sm:mb-14">
+            <p class="text-emerald-500 font-semibold text-xs sm:text-sm mb-2 tracking-widest">Details</p>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">実施方法</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 text-center card-lift shadow-sm">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl icon-box mx-auto mb-3 sm:mb-4 shadow-md shadow-emerald-200">
+                <i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 mb-1 sm:mb-2">場所</h3>
+              <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">対面（ご自宅または近所のカフェ等）<br />または オンライン</p>
+            </div>
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 text-center card-lift shadow-sm">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl icon-box mx-auto mb-3 sm:mb-4 shadow-md shadow-teal-200">
+                <i data-lucide="badge-japanese-yen" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 mb-1 sm:mb-2">費用</h3>
+              <p class="text-emerald-600 text-base sm:text-lg font-bold">完全無料</p>
+            </div>
+            <div class="bg-white p-5 sm:p-7 rounded-2xl border border-emerald-100 text-center card-lift shadow-sm">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl icon-box mx-auto mb-3 sm:mb-4 shadow-md shadow-blue-200">
+                <i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 mb-1 sm:mb-2">時間</h3>
+              <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">1時間程度</p>
+            </div>
+          </div>
+
+          <!-- セクション内CTA -->
+          <div class="text-center mt-10 sm:mt-14">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 text-base sm:text-lg font-bold">
+              阪大生の無料相談に申し込む
+              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 無料相談 お問い合わせ -->
+      <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-emerald-500 via-teal-500 to-blue-500 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-emerald-300/20 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+          <div class="max-w-3xl mx-auto text-center text-white">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">お問い合わせ</h2>
+            <p class="text-sm sm:text-lg text-white/90 mb-8 sm:mb-12 leading-relaxed px-2">
+              まずはお気軽にお電話・メールでご連絡ください。
+            </p>
+            <div class="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 max-w-md mx-auto text-gray-800 shadow-2xl">
+              <div class="space-y-3 sm:space-y-4 text-left">
+                <a href="tel:080-2484-1883" class="flex items-center gap-3 sm:gap-4 bg-green-50 hover:bg-emerald-100 active:bg-emerald-200 p-3.5 sm:p-4 rounded-xl transition-colors">
+                  <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl icon-box flex-shrink-0 shadow-md shadow-emerald-200">
+                    <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500 mb-0.5">お電話でのお問い合わせ</p>
+                    <p class="text-base sm:text-lg font-bold text-gray-900">080-2484-1883</p>
+                  </div>
+                </a>
+                <a href="mailto:info@handai-juku.jp" class="flex items-center gap-3 sm:gap-4 bg-green-50 hover:bg-emerald-100 active:bg-emerald-200 p-3.5 sm:p-4 rounded-xl transition-colors">
+                  <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl icon-box flex-shrink-0 shadow-md shadow-teal-200">
+                    <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500 mb-0.5">メールでのお問い合わせ</p>
+                    <p class="text-sm sm:text-base font-semibold text-gray-900">info@handai-juku.jp</p>
+                  </div>
+                </a>
+              </div>
+              <p class="text-gray-400 mt-5 sm:mt-6 text-xs text-center">受付時間：平日 14:00〜21:00 / 土曜 10:00〜18:00</p>
+
+              <div class="mt-6 pt-6 border-t border-gray-100">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white py-4 rounded-xl transition-all duration-300 font-bold text-sm sm:text-base shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300">
+                  阪大生の無料相談に申し込む
+                  <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /content-consultation -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 sm:py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <img src="./S__95297538.jpg" alt="TUTOLOOP" class="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+          <span class="text-white font-bold text-sm sm:text-base">TUTOLOOP</span>
+        </div>
+        <p class="text-xs sm:text-sm text-center md:text-right">豊中市・箕面市・吹田市で、小学生・中学生の思考力を育てます</p>
+      </div>
+      <div class="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-gray-800 text-center text-xs text-gray-500">
+        <p>&copy; 2024 TUTOLOOP. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ用固定CTAバー -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLSatCWq5_df_4KJa9EJmWZliiaBgWvFO_ncM_y82hJLrBfA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white py-3.5 rounded-xl transition-all duration-300 font-bold text-sm shadow-lg shadow-blue-200">
+      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      阪大生の無料相談に申し込む
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function switchTab(tab) {
+      var aboutContent = document.getElementById('content-about');
+      var consultationContent = document.getElementById('content-consultation');
+      var tabAbout = document.getElementById('tab-about');
+      var tabConsultation = document.getElementById('tab-consultation');
+      var base = 'px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 font-medium text-xs sm:text-sm ';
+      var inactiveClass = 'text-gray-500 hover:text-blue-600 hover:bg-blue-50';
+
+      if (tab === 'about') {
+        aboutContent.style.display = '';
+        consultationContent.style.display = 'none';
+        tabAbout.className = base + 'bg-blue-500 text-white shadow-md shadow-blue-200';
+        tabConsultation.className = base + inactiveClass;
+      } else {
+        aboutContent.style.display = 'none';
+        consultationContent.style.display = '';
+        tabAbout.className = base + inactiveClass;
+        tabConsultation.className = base + 'bg-emerald-500 text-white shadow-md shadow-emerald-200';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
