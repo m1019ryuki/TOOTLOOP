@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Users, Target, MapPin, BookOpen, Lightbulb, ArrowRight, Mail, Phone, Star, Zap } from 'lucide-react';
+import { Users, Target, MapPin, BookOpen, Lightbulb, ArrowRight, Phone, Star, Zap } from 'lucide-react';
 
 function App() {
   const [tab, setTab] = useState<'about' | 'consultation'>('about');
@@ -354,15 +354,6 @@ function AboutContent({ onGoToConsultation }: { onGoToConsultation: () => void }
                     <p className="text-xl font-bold text-white">06-XXXX-XXXX</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
-                  <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-indigo-300" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-400 mb-1">メールでのお問い合わせ</p>
-                    <p className="text-lg font-medium text-white">info@handai-juku.jp</p>
-                  </div>
-                </div>
               </div>
               <p className="text-slate-500 mt-8 text-sm">
                 受付時間：平日 14:00〜21:00 / 土曜 10:00〜18:00
@@ -422,15 +413,6 @@ function ConsultationContent() {
                   <div>
                     <p className="text-sm text-slate-400 mb-1">お電話でのお問い合わせ</p>
                     <p className="text-xl font-bold text-white">06-XXXX-XXXX</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
-                  <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-indigo-300" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-400 mb-1">メールでのお問い合わせ</p>
-                    <p className="text-lg font-medium text-white">info@handai-juku.jp</p>
                   </div>
                 </div>
               </div>
