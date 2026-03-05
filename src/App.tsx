@@ -354,13 +354,13 @@ function AboutContent({ onGoToConsultation }: { onGoToConsultation: () => void }
                     <p className="text-xl font-bold text-white">06-XXXX-XXXX</p>
                   </div>
                 </div>
-                <a href="mailto:tootloop@gmail.com" className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
+                <a href="mailto:tutoloop01@gmail.com" className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
                   <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-blue-300" />
                   </div>
                   <div>
                     <p className="text-sm text-slate-400 mb-1">メールでのお問い合わせ</p>
-                    <p className="text-xl font-bold text-white">tootloop@gmail.com</p>
+                    <p className="text-xl font-bold text-white">tutoloop01@gmail.com</p>
                   </div>
                 </a>
               </div>
@@ -424,13 +424,13 @@ function ConsultationContent() {
                     <p className="text-xl font-bold text-white">06-XXXX-XXXX</p>
                   </div>
                 </div>
-                <a href="mailto:tootloop@gmail.com" className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
+                <a href="mailto:tutoloop01@gmail.com" className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
                   <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-blue-300" />
                   </div>
                   <div>
                     <p className="text-sm text-slate-400 mb-1">メールでのお問い合わせ</p>
-                    <p className="text-xl font-bold text-white">tootloop@gmail.com</p>
+                    <p className="text-xl font-bold text-white">tutoloop01@gmail.com</p>
                   </div>
                 </a>
               </div>
