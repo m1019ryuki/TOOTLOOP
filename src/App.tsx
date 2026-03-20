@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Users, Target, MapPin, BookOpen, Lightbulb, ArrowRight, Phone, Mail, Star, Zap } from 'lucide-react';
+import { Users, Target, MapPin, BookOpen, Lightbulb, ArrowRight, Phone, Mail, Star, Zap, ClipboardList, MessageSquareText, Route } from 'lucide-react';
 
 function App() {
   const [tab, setTab] = useState<'about' | 'consultation'>('about');
@@ -388,6 +388,7 @@ function AboutContent({ onGoToConsultation }: { onGoToConsultation: () => void }
 function ConsultationContent() {
   return (
     <>
+      {/* メインビジュアル・導入 */}
       <section className="relative py-28 md:py-40 overflow-hidden">
         <div className="absolute inset-0 hero-gradient" />
         <div className="absolute inset-0 bg-mesh" />
@@ -402,18 +403,155 @@ function ConsultationContent() {
                 <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-2xl" />
               </div>
             </div>
-            <p className="text-blue-400 font-semibold tracking-widest text-sm uppercase mb-4">Free Consultation</p>
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tight">
-              無料相談
-            </h1>
-            <p className="text-xl text-slate-300 mb-14 leading-relaxed max-w-2xl mx-auto">
-              お子様の学習についてお気軽にご相談ください。
+            <div className="inline-flex items-center gap-2 bg-blue-500/15 text-blue-300 px-5 py-2.5 rounded-full text-sm font-medium mb-8 border border-blue-500/20">
+              <ClipboardList className="w-4 h-4" />
+              無料学習診断
+            </div>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 leading-tight tracking-tight">
+              お子様に合った勉強の仕方を、
               <br />
-              阪大生講師が丁寧にお答えします。
+              <span className="gradient-text">阪大生と一緒に見つけませんか？</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+              多くの生徒が、自分でも気づかない「非効率な学習のくせ」に縛られています。
+              <br />
+              私たちはそれらを正確に可視化し、一人ひとりに最適な勉強法を一緒に見つけていきます。
+            </p>
+            <p className="text-sm text-slate-500 mb-14">
+              所要時間 約60分 / 完全無料 / オンライン対応可
+            </p>
+            <a
+              href="#consultation-contact"
+              className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-10 py-5 rounded-full hover:from-blue-400 hover:to-blue-500 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 text-lg font-semibold"
+            >
+              無料学習診断を申し込む
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 無料学習診断の流れ */}
+      <section className="py-24 bg-slate-900 relative">
+        <div className="section-divider absolute top-0 left-0 right-0" />
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-blue-400 font-semibold tracking-widest text-sm uppercase mb-4">Diagnosis Flow</p>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                無料学習診断の流れ
+              </h2>
+              <p className="text-slate-400 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
+                阪大生が専門的な視点でお子様の学習を分析し、
+                <br />
+                具体的な改善策をご提案します。
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 relative">
+              {/* ステップ間の接続線（デスクトップ） */}
+              <div className="hidden md:block absolute top-20 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-blue-500/50 via-indigo-500/50 to-cyan-500/50" />
+
+              {/* ステップ01 */}
+              <div className="relative bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 card-hover group">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="relative w-16 h-16">
+                    <div className="absolute inset-0 bg-blue-500/20 rounded-2xl blur-xl group-hover:bg-blue-500/30 transition-colors" />
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <ClipboardList className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <span className="text-blue-400 font-bold text-sm tracking-widest">STEP 01</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  事前アンケートの分析
+                </h3>
+                <p className="text-slate-400 leading-relaxed">
+                  事前のアンケート内容に基づき、現時点での学習習慣や思考の「くせ」を専門的な視点で分析します。お子様の現状を正確に把握するための大切なステップです。
+                </p>
+              </div>
+
+              {/* ステップ02 */}
+              <div className="relative bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 card-hover group">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="relative w-16 h-16">
+                    <div className="absolute inset-0 bg-indigo-500/20 rounded-2xl blur-xl group-hover:bg-indigo-500/30 transition-colors" />
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <MessageSquareText className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <span className="text-indigo-400 font-bold text-sm tracking-widest">STEP 02</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  お子様の「学習のくせ」をフィードバック
+                </h3>
+                <p className="text-slate-400 leading-relaxed">
+                  診断当日に、自分では気づきにくい非効率なポイントや、伸ばすべき強みを具体的にお伝えします。「なぜ成績が伸び悩むのか」の原因が明確になります。
+                </p>
+              </div>
+
+              {/* ステップ03 */}
+              <div className="relative bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 card-hover group">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="relative w-16 h-16">
+                    <div className="absolute inset-0 bg-cyan-500/20 rounded-2xl blur-xl group-hover:bg-cyan-500/30 transition-colors" />
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                      <Route className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <span className="text-cyan-400 font-bold text-sm tracking-widest">STEP 03</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  オーダーメイドの学習ロードマップ作成
+                </h3>
+                <p className="text-slate-400 leading-relaxed">
+                  分析結果を基に、目標達成のために「何を」「いつまでに」「どう」やるべきか、具体的なロードマップをその場で共に作成します。
+                </p>
+              </div>
+            </div>
+
+            {/* 信頼感の補足 */}
+            <div className="mt-16 relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 p-10 md:p-14 rounded-3xl">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+              <div className="relative text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
+                  単なる「相談」ではありません。
+                  <br />
+                  阪大生による、専門的な「学習診断」です。
+                </h3>
+                <p className="text-lg text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
+                  私たちが提供するのは、学習の現状を科学的に分析し、
+                  最適な改善策を導き出す「診断」です。
+                  <br />
+                  お子様が「これなら自分の弱点がわかる」と実感できる、
+                  論理的で具体的なフィードバックをお届けします。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* お問い合わせフォーム */}
+      <section id="consultation-contact" className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="section-divider absolute top-0 left-0 right-0" />
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-blue-400 font-semibold tracking-widest text-sm uppercase mb-4">Contact Us</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              無料学習診断のお申し込み
+            </h2>
+            <p className="text-xl text-slate-300 mb-14 leading-relaxed">
+              まずはお気軽にお問い合わせください。
+              <br />
+              オンライン・対面どちらにも対応しています。
             </p>
 
             <div className="glass p-10 md:p-14 rounded-3xl max-w-xl mx-auto">
-              <h2 className="text-2xl font-bold mb-10">お問い合わせ</h2>
+              <h3 className="text-2xl font-bold mb-10">お問い合わせ</h3>
               <div className="space-y-5 text-left">
                 <div className="flex items-center gap-4 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors border border-white/5">
                   <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
