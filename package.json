@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "build:static": "mkdir -p dist && cp index.html dist/ && cp public/S__95297538.jpg dist/"
+    "build:static": "mkdir -p dist && cp index.html tokushoho.html privacy.html dist/ && cp public/S__95297538.jpg dist/"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

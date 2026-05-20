@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build:static",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/tokushoho.html", "destination": "/tokushoho.html" },
+    { "source": "/privacy.html", "destination": "/privacy.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
